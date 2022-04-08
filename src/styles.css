@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+#header {
+  display: flex;
+  background: radial-gradient(
+    circle,
+    rgba(69, 69, 73, 1) 0%,
+    rgba(16, 13, 24, 1) 100%
+  );
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8rem;
+}
+
+.logo {
+  color: #999;
+  font-size: 22px;
+  display: flex;
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+.logo img {
+  margin: 0 5px;
+}
+
+.content .menu {
+  display: flex;
+}
+
+.menu .menuLink {
+  color: #999;
+  font-size: 18px;
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.menu .menuLink:hover {
+  color: #fff;
+  background: radial-gradient(
+    circle,
+    rgba(69, 69, 73, 1) 0%,
+    rgba(16, 13, 24, 0.7231267507002801) 100%
+  );
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.content #menuResponsive {
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  display: none;
+}
+
+.content #menuResponsive:hover {
+  background: radial-gradient(
+    circle,
+    rgba(69, 69, 73, 1) 0%,
+    rgba(16, 13, 24, 0.7231267507002801) 100%
+  );
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.content #menuResponsive:hover > span {
+  background: #fff;
+}
+
+.content #menuResponsive span {
+  display: block;
+  margin-left: auto;
+  width: 25px;
+  background: #999;
+  height: 2px;
+}
+
+.content #menuResponsive span + span {
+  width: 25px;
+  margin-top: 3px;
+}
+
+.core {
+  text-align: center;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.social {
+  padding: 15px;
+}
+
+.social .icons {
+  margin-top: 20px;
+}
+
+.icons a {
+  font-size: 24px;
+  color: #333;
+  padding: 10px 10px;
+}
+.icons a:hover {
+  color: #eee;
+  background: #555;
+}
+
+/* ===================== responsive ===================== */
+
+@media (max-width: 992px) {
+  .content {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .content .menu {
+    display: none;
+  }
+
+  .content .menu.show {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    margin-top: 4.1rem;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: radial-gradient(
+      circle,
+      rgba(69, 69, 73, 1) 0%,
+      rgba(16, 13, 24, 1) 100%
+    );
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+
+  .menu .menuLink {
+    margin: 0 -10px auto;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  #menuResponsive {
+    display: block !important;
+  }
+}
